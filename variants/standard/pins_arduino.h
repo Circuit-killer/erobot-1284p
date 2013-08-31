@@ -105,70 +105,70 @@ const uint16_t PROGMEM port_to_input_PGM[] =
 
 const uint8_t PROGMEM digital_pin_to_port_PGM[] =
 {
-	PB, /* 0 */
+	PD, /* 0 */
+	PD,
 	PB,
+	PC,
 	PB,
-	PB,
-	PB,
-	PB,
+	PD,
 	PB,
 	PB,
 	PD, /* 8 */
 	PD,
-	PD,
-	PD,
-	PD,
-	PD,
-	PD,
-	PD,
-	PC, /* 16 */
 	PC,
 	PC,
-	PC,
-	PC,
-	PC,
-   	PC,
-	PC,
-	PA, /* 24 */
 	PA,
 	PA,
 	PA,
 	PA,
+	PA, /* 16 */
 	PA,
 	PA,
-	PA  /* 31 */
+	PA,
+	PB,
+	PB,
+   	PB,
+	PC,
+	PC, /* 24 */
+	PC,
+	PC,
+	PC,
+	PD,
+	PD,
+	PD,
+	PD  /* 31 */
 };
 
 const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] =
 {
 	_BV(0), /* 0, port B */
 	_BV(1),
-	_BV(2),
 	_BV(3),
+	_BV(2),
 	_BV(4),
 	_BV(5),
 	_BV(6),
 	_BV(7),
-	_BV(0), /* 8, port D */
+	_BV(2), /* 8, port D */
+	_BV(3),
+	_BV(1),
+	_BV(0),
+	_BV(0),
 	_BV(1),
 	_BV(2),
 	_BV(3),
-	_BV(4),
+	_BV(4), /* 16, port C */
 	_BV(5),
 	_BV(6),
 	_BV(7),
-	_BV(0), /* 16, port C */
+	_BV(0),
 	_BV(1),
 	_BV(2),
 	_BV(3),
-	_BV(4),
+	_BV(4), /* 24, port A */
 	_BV(5),
 	_BV(6),
 	_BV(7),
-	_BV(0), /* 24, port A */
-	_BV(1),
-	_BV(2),
-	_BV(3),
 	_BV(4),
 	_BV(5),
 	_BV(6),
@@ -177,30 +177,18 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] =
 
 const uint8_t PROGMEM digital_pin_to_timer_PGM[] =
 {
-	NOT_ON_TIMER, 	/* 0  - PB0 */
-	NOT_ON_TIMER, 	/* 1  - PB1 */
-	NOT_ON_TIMER, 	/* 2  - PB2 */
-	TIMER0A,     	/* 3  - PB3 */
-	TIMER0B, 	/* 4  - PB4 */
-	NOT_ON_TIMER, 	/* 5  - PB5 */
-	TIMER3A, 	/* 6  - PB6 */
-	TIMER3B,	/* 7  - PB7 */
 	NOT_ON_TIMER, 	/* 8  - PD0 */
 	NOT_ON_TIMER, 	/* 9  - PD1 */
+	TIMER0A,     	/* 3  - PB3 */
+	NOT_ON_TIMER,   /* 18 - PC2 */
+	TIMER0B, 		/* 4  - PB4 */
+	NOT_ON_TIMER, 	/* 5  - PB5 */
+	TIMER3A, 		/* 6  - PB6 */
+	TIMER3B,		/* 7  - PB7 */
 	NOT_ON_TIMER, 	/* 10 - PD2 */
 	NOT_ON_TIMER, 	/* 11 - PD3 */
-	TIMER1B,     	/* 12 - PD4 */
-	TIMER1A,     	/* 13 - PD5 */
-	TIMER2B,     	/* 14 - PD6 */
-	TIMER2A,     	/* 15 - PD7 */
-	NOT_ON_TIMER, 	/* 16 - PC0 */
 	NOT_ON_TIMER,   /* 17 - PC1 */
-	NOT_ON_TIMER,   /* 18 - PC2 */
-	NOT_ON_TIMER,   /* 19 - PC3 */
-	NOT_ON_TIMER,   /* 20 - PC4 */
-	NOT_ON_TIMER,   /* 21 - PC5 */
-	NOT_ON_TIMER,   /* 22 - PC6 */
-	NOT_ON_TIMER,   /* 23 - PC7 */
+	NOT_ON_TIMER, 	/* 16 - PC0 */
 	NOT_ON_TIMER,   /* 24 - PA0 */
 	NOT_ON_TIMER,   /* 25 - PA1 */
 	NOT_ON_TIMER,   /* 26 - PA2 */
@@ -208,7 +196,19 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] =
 	NOT_ON_TIMER,   /* 28 - PA4 */
 	NOT_ON_TIMER,   /* 29 - PA5 */
 	NOT_ON_TIMER,   /* 30 - PA6 */
-	NOT_ON_TIMER   /* 31 - PA7 */
+	NOT_ON_TIMER,   /* 31 - PA7 */
+	NOT_ON_TIMER, 	/* 0  - PB0 */
+	NOT_ON_TIMER, 	/* 1  - PB1 */
+	NOT_ON_TIMER, 	/* 2  - PB2 */
+	NOT_ON_TIMER,   /* 19 - PC3 */
+	NOT_ON_TIMER,   /* 20 - PC4 */
+	NOT_ON_TIMER,   /* 21 - PC5 */
+	NOT_ON_TIMER,   /* 22 - PC6 */
+	NOT_ON_TIMER,   /* 23 - PC7 */
+	TIMER1B,     	/* 12 - PD4 */
+	TIMER1A,     	/* 13 - PD5 */
+	TIMER2B,     	/* 14 - PD6 */
+	TIMER2A     	/* 15 - PD7 */
 };
 
 #endif // ARDUINO_MAIN
