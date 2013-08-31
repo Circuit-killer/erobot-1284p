@@ -1,8 +1,8 @@
-# Mighty 1284P: Platform files for Arduino to run on ATmega1284P
+# E-robot: Platform files for Arduino to run on ATmega1284P
 
 ## What is it?
 
-Everything you need to run Arduino on ATmega1284P.
+Everything you need to run Arduino on ATmega1284P. (this is based off https://github.com/maniacbug/mighty-1284p)
 
 ## Current state
 
@@ -29,8 +29,4 @@ http://maniacbug.wordpress.com/2011/11/27/arduino-on-atmega1284p-4/
 
 ## Supported Boards
 
-* 'Mighty 1284p 16MHz using Optiboot'.  The main board.  Use this unless you have some clear reason to use another board.  This uses a straightforward pinout that is especially helpful on a breadboard-built unit.
-* 'avr-developers.com pinouts 16MHz using Optiboot'.  Some people prefer the pinouts from avr-developers.com.  The classic pinouts.
-* 'Bobuino'.  CrossRoads' board built for maximum compatibility with Arduino Uno-class shields.
-* 'Original Mighty 1284p 16MHz'.  The very first bootloader I ever got working.  Not recommended for use, but here as historical record.
-* 'Original Mighty 1284p 8MHz'.  Ditto, but runs at 8MHz.
+* E-robot 1284p 16MHz using Optiboot
