@@ -36,7 +36,6 @@
    PCINT7-0: D31-24   : bit 0
    */
 
-//TODO num digital pins
 #define NUM_DIGITAL_PINS            31
 #define NUM_ANALOG_INPUTS           7
 #define analogInputToDigitalPin(p)  ((p < NUM_ANALOG_INPUTS) ? (p) + 12 : -1)
@@ -60,6 +59,8 @@ static const uint8_t A4 = 16;
 static const uint8_t A5 = 17;
 static const uint8_t A6 = 19;
 
+//Pin chage interrupts are per port, and the pins in e-robot boad are not in sequence 
+//so soft serial and other libraries which use this need pin number from arduino to be able to use this
 #define digitalPinToPCICR(p)    (((p) >= 0 && (p) < NUM_DIGITAL_PINS) ? (&PCICR) : ((uint8_t *)0))
 #define digitalPinToPCICRbit(p) (((p) <= 7) ? 1 : (((p) <= 15) ? 3 : (((p) <= 23) ? 2 : 0)))
 #define digitalPinToPCMSK(p)    (((p) <= 7) ? (&PCMSK2) : (((p) <= 13) ? (&PCMSK0) : (((p) <= 21) ? (&PCMSK1) : ((uint8_t *)0))))
